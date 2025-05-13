@@ -1,1 +1,269 @@
-file:///C:/Users/tuter/AppData/Local/Temp/771dbf36-b6d4-4060-b693-2c60ef30dc98_jsfiddle-y6ckqjrx-1%20(1).zip.c98/index-jsfiddle-y6ckqjrx-1.html
+
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle y6ckqjrx</title>
+
+  <style>
+    
+  </style>
+
+  
+</head>
+<body>
+  <!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velas Aromáticas Nayeliann</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        background-color: #fff9f5;
+        color: #333;
+      }
+
+      header {
+        background-color: #f8e1da;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #b76e79;
+      }
+
+      nav {
+        background-color: #f5c7d3;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #b76d94;
+      }
+
+      .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 30px;
+      }
+
+      .tarjeta {
+        background-color: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .tarjeta:hover {
+        transform: translateY(-5px);
+      }
+
+      .tarjeta img {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+
+      .tarjeta h3 {
+        margin: 0.5rem 0;
+        color: #a15d67;
+      }
+
+      .tarjeta p {
+        font-size: 0.9rem;
+      }
+
+      .boton {
+        background-color: #d291bc;
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .boton:hover {
+        background-color: #b76d94;
+      }
+
+      #carrito {
+        background-color: #ffe6f2;
+        border: 2px dashed #d291bc;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      #lista-carrito li {
+        margin-bottom: 8px;
+      }
+
+      .eliminar {
+        background-color: #ff5c5c;
+        border: none;
+        color: white;
+        margin-left: 10px;
+        padding: 3px 8px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      footer {
+        background-color: #f8e1da;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        color: #b76e79;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Velas Aromáticas Nayeliann</h1>
+      <p>Llena tu hogar de aroma y armonía 🌿</p>
+    </header>
+
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <section class="productos">
+      <div class="tarjeta">
+        <img
+          src="https://craftystore.com.mx/cdn/shop/files/79edfffce66e0f99ebba4ed5ac6e0b67_1024x1024@2x.jpg?v=1689803880"
+          alt="Vela Lavanda"
+        />
+        <h3>Vela de Lavanda</h3>
+        <p>$5.00 - Aroma relajante ideal para meditación o antes de dormir.</p>
+        <button class="boton" onclick="agregarAlCarrito('Vela de Lavanda', 5)">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <div class="tarjeta">
+        <img
+          src="https://m.media-amazon.com/images/I/71DwwrOY6nL._UF894,1000_QL80_.jpg"
+          alt="Vela Cítrica"
+        />
+        <h3>Vela Cítrica</h3>
+        <p>$4.50 - Refresca tus espacios con notas de naranja y limón.</p>
+        <button class="boton" onclick="agregarAlCarrito('Vela Cítrica', 4.5)">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <div class="tarjeta">
+        <img
+          src="https://www.hacervelas.es/wp-content/uploads/2021/01/vela-de-cupcake-post.jpg"
+          alt="Vela Canela"
+        />
+        <h3>Vela de Canela</h3>
+        <p>$6.00 - Un aroma cálido y acogedor para tardes tranquilas.</p>
+        <button class="boton" onclick="agregarAlCarrito('Vela de Canela', 6)">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <div class="tarjeta">
+        <img
+          src="https://enchantedflamesmx.com/cdn/shop/files/9.jpg?v=1713763022&width=990"
+          alt="Vela de vainilla"
+        />
+        <h3>Vela de Vainilla</h3>
+        <p>$6.00 - Dulce y acogedora.</p>
+        <button class="boton" onclick="agregarAlCarrito('Vela de Vainilla', 6)">
+          Agregar al carrito
+        </button>
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2>🛒 Carrito de Compras</h2>
+      <p><strong>Productos en el carrito:</strong> <span id="total">0</span></p>
+      <p>
+        <strong>Total a pagar:</strong> $<span id="total-precio">0.00</span>
+      </p>
+      <ul id="lista-carrito">
+        <!-- Aquí se mostrarán los productos -->
+      </ul>
+    </section>
+
+    <footer>
+      <p>Contacto: (787)9297253 | Instagram: nayeliramos7129@gmail.com</p>
+      <p>
+        &copy; 2025 Velas Aromáticas Nayeliann. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script>
+      let totalProductos = 0
+      let totalPrecio = 0
+      const listaCarrito = document.getElementById("lista-carrito")
+      const totalElement = document.getElementById("total")
+      const totalPrecioElement = document.getElementById("total-precio")
+
+      function agregarAlCarrito(nombre, precio) {
+        totalProductos++
+        totalPrecio += precio
+
+        totalElement.textContent = totalProductos
+        totalPrecioElement.textContent = totalPrecio.toFixed(2)
+
+        const item = document.createElement("li")
+        item.innerHTML = `${nombre} - $${precio.toFixed(2)} 
+        <button class="eliminar" onclick="eliminarDelCarrito(this, ${precio})">Eliminar</button>`
+        listaCarrito.appendChild(item)
+      }
+
+      function eliminarDelCarrito(boton, precio) {
+        totalProductos--
+        totalPrecio -= precio
+
+        totalElement.textContent = totalProductos
+        totalPrecioElement.textContent = totalPrecio.toFixed(2)
+
+        const item = boton.parentElement
+        item.remove()
+      }
+    </script>
+  </body>
+</html>
+
+
+  <script>
+    
+  </script>
+</body>
+</html>
